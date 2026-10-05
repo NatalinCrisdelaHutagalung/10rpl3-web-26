@@ -1,201 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tabel Data</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-    <h2>Data Biodata Siswa PPLG</h2>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
-</head>
+
+
 <body>
 
-<table style="width:100%">
-  <tr>
-    <th>Field / Atribut</th>
-    <th>Keterangan / Hasil Input</th>
-  </tr>
-  <tr>
-    <td>Nama</td>
-    <td>Natalin Crisdela Hutagalung</td>
-  </tr>
-  <tr>
-    <td>Alamat</td>
-    <td>Jl.Simpang Sidodadi Panggungrejo</td>
-  </tr>
- <tr>
-    <td>Jurusan</td>
-    <td>RPL</td>
-  </tr>
-  <tr>
-    <td>Jenis Kelamin</td>
-    <td>Perempuan</td>
-  </tr>
-   <tr>
-    <td>Tinggi Badan (cm)</td>
-    <td>149</td>
-  </tr>
-  <tr>
-    <td>Berat Badan (kg)</td>
-    <td>41</td>
-  </tr>
-   <tr>
-    <td>Hobby</td>
-    <td>Menonton Film</td>
-  </tr>
-  <tr>
-    <td>No Hp</td>
-    <td>082131466649</td>
-    </tr>
-  </tr><table style="width:100%">
-     <th>Status: Data berhasil divalidasi dan direkap ke dalam tabel</th>
-    </table>
-</table>
-<br>
-<table style="width:100%">
-  <h2>Visualisasi Jelas: Merge & Split Cell</h2>
+    <main class="container">
 
-<table border="1" style="border-collapse: collapse; text-align: center; width: 100%;">
-  <!-- BARIS 1: Header (3 Judul Kolom) -->
-  <tr>
-    <th>Kategori Data</th>
-    <th>Atribut Form</th>
-    <th>Hasil Isian Siswa</th>
-  </tr>
+        <div class="header">
 
-  <!-- BARIS 2: Awal Merge 3 Baris (Kolom 1 mengambil jatah 3 baris ke bawah) -->
-  <tr>
-    <td rowspan="3">IDENTITAS PRIBADI</td>
-    <td>Nama:</td>
-    <td>Natalin Crisdela Hutagalung</td>
-  </tr>
-  
-  <!-- BARIS 3: Data Baris ke-2 -->
-  <tr>
-    <td>Alamat:</td>
-    <td>Jl.Simpang Sidodadi Panggungrejo</td>
-  </tr>
-  
-  <!-- BARIS 4: Data Baris ke-3 -->
-  <tr>
-    <td>No Hp:</td>
-    <td>082131466649</td>
-  </tr>
-  <tr>
-    <td rowspan="1">Akademik</td>
-    <td>Jurusan:</td>
-    <td>RPL</td>
-  </tr>
-  <tr>
-    <td rowspan="1">Preferensi</td>
-    <td>Jenis Kelamin:</td>
-    <td>Perempuan</td>
-  </tr>
- <tr>
-    <td rowspan="2" class="center">Data fisik</td>
-    <td rowspan="2" class="center">Pengukuran badan:</td>
-    <td>tinggi:149</td>
-  </tr>
-  <tr>
- <td>Berat:41</td>
- </tr>
-  <tr>
- <td>Lain-lain</td>
- <td>Hobi:</td>
- <td>Menonton Film</td>
- </tr>
-</table>
-</table>
-</table>
+            <h1>TABEL DATA</h1>
+
+            <p class="subtitle">
+                Data & Informasi
+            </p>
+
+        </div>
+
+
+        <section class="files">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>No</th>
+
+                        <th>Nama</th>
+
+                        <th>Kelas</th>
+
+                        <th>Tema</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>Natalin</td>
+
+                        <td>X RPL 3</td>
+
+                        <td>Mountain</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>Contoh Siswa</td>
+
+                        <td>X RPL 3</td>
+
+                        <td>Nature</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>Contoh Siswa 2</td>
+
+                        <td>X RPL 3</td>
+
+                        <td>Mountain</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <br>
+
+
+            <a href="index.html"
+               class="file-card">
+
+                ← Kembali ke Beranda
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
-<h1>Tantangan Tabel Kompleks</h1>
- <table>
- <!-- HEADER -->
- <tr>
-   <th>Kategori Utama </th>
-   <th> Sub kategori</th>
-   <th> Atribut isisan</th>
-   <th>Detail data/nilai</th>
-  </tr>
-
-  <!-- DATA SISWA -->
-  <tr>
- <!-- MERGE 3 BARIS -->
-   <th class="kategori" rowspan="3">
-   DATA SISWA
-   </th>
-
-  <!-- MERGE 2 BARIS -->
-   <td class="sub" rowspan="2">
-      Identitas Utama
-   </td>
-
-   <td class="atribut">
-     Nama Lengkap
-  </td>
-
-  <td class="detail">
-    Natalin Crisdela Hutagalung
-  </td>
-
-  </tr>
-
-
-  <tr>
-
-  <td class="atribut">
-    Alamat Rumah
-  </td>
-
-  <td class="detail">
-    Jl.Simpang Sidodadi Panggungrejo
-  </td>
-
-  </tr>
-
-
-  <!-- BARIS KETIGA DATA SISWA -->
-  <tr>
-
-   <td colspan="2" class="kontak">
-            Kontak Aktif: 082131466649
-        </td>
-
-   <td>Hobi: Menonton Fim</td>
- </tr>
-  <th>Akademik</th>
-    <td>Jurusan PPLG</td>
-    <td>Pilihan kelas</td>
-    <td>RPL(Rekayasa perangak lunak)</td>
-    <tr>
-  <th>Preferensi</th>
-    <td>Gender</td>
-    <td>Jenis Kelamin</td>
-    <td>Perempuan</td>
-    <tr>
-      <tr>
-    <th rowspan="2">Antropometri</th>
-    <td rowspan="2">Pengukuran Fisik</td>
-    <td rowspan="2">Parameter Badan</td>
-
-    <td>
-        Tinggi Badan: 149,5 cm
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-        Berat Badan: 41 kg
-    </td>
-  
-    
-  </table>
-  </tr>
-</table>
