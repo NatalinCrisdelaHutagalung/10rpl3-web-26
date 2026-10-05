@@ -1255,7 +1255,7 @@ button:hover {
 
 }
 
-.foto-profil {
+.foto-profile.jpg {
     width: 150px;
     height: 150px;
 
@@ -1271,7 +1271,7 @@ button:hover {
         0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.foto-profil img {
+.foto-profile.jpg {
     width: 100%;
     height: 100%;
 
