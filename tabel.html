@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
 
@@ -8,240 +8,924 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Tabel Data - Natalin</title>
+    <title>Data Biodata Siswa</title>
 
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================
+           BACKGROUND WEBSITE
+        ===================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            padding: 40px 25px;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: #e8f0ed;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #101c18,
+                    #1d332a,
+                    #101916
+                );
+
+            min-height: 100vh;
+
+        }
+
+
+
+        /* =====================================
+           JUDUL
+        ===================================== */
+
+        h1,
+        h2 {
+
+            text-align: center;
+
+            color: #f1f5f4;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        h1 {
+
+            font-size: 32px;
+
+            margin-top: 50px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        h2 {
+
+            font-size: 25px;
+
+            margin-top: 30px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        /* =====================================
+           TABEL UMUM
+        ===================================== */
+
+        table {
+
+            width: 100%;
+
+            margin: 25px auto;
+
+            border-collapse: collapse;
+
+            background:
+                rgba(31, 51, 43, 0.96);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0, 0, 0, 0.35);
+
+        }
+
+
+
+        /* =====================================
+           HEADER TABEL
+        ===================================== */
+
+        th {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #304c40,
+                    #243e34
+                );
+
+            color: #a9c8ed;
+
+            padding: 16px 14px;
+
+            font-size: 15px;
+
+            letter-spacing: 0.5px;
+
+            border: 1px solid #53647c;
+
+        }
+
+
+
+        /* =====================================
+           ISI TABEL
+        ===================================== */
+
+        td {
+
+            padding: 14px;
+
+            color: #e1e9e6;
+
+            background: #1d3029;
+
+            border: 1px solid #40584e;
+
+            line-height: 1.5;
+
+        }
+
+
+
+        /* =====================================
+           EFEK HOVER
+        ===================================== */
+
+        tr {
+
+            transition: 0.3s;
+
+        }
+
+
+        tbody tr:hover,
+        table tr:hover {
+
+            background: #2d493e;
+
+        }
+
+
+        td:hover {
+
+            background: #304b40;
+
+            color: #ffffff;
+
+        }
+
+
+
+        /* =====================================
+           TABEL BIODATA PERTAMA
+        ===================================== */
+
+        table:first-of-type th {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #3b5b4d,
+                    #29483b
+                );
+
+        }
+
+
+        table:first-of-type td:first-child {
+
+            color: #a8c28c;
+
+            font-weight: bold;
+
+            width: 35%;
+
+        }
+
+
+
+        /* =====================================
+           STATUS VALIDASI
+        ===================================== */
+
+        th[colspan] {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #345443,
+                    #263f34
+                );
+
+            color: #a8d49a;
+
+            font-size: 14px;
+
+        }
+
+
+
+        /* =====================================
+           TABEL MERGE & SPLIT
+        ===================================== */
+
+        table[border="1"] {
+
+            border: 1px solid #53647c;
+
+        }
+
+
+        table[border="1"] th {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #30483e,
+                    #1e352c
+                );
+
+            color: #9fc0e5;
+
+        }
+
+
+        table[border="1"] td {
+
+            background: #1b3028;
+
+        }
+
+
+
+        /* =====================================
+           KATEGORI
+        ===================================== */
+
+        .kategori {
+
+            color: #a8c28c;
+
+            font-size: 16px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .sub {
+
+            color: #83a7d5;
+
+            font-weight: bold;
+
+        }
+
+
+        .atribut {
+
+            color: #dbe7e2;
+
+            font-weight: 500;
+
+        }
+
+
+        .detail {
+
+            color: #f1f5f4;
+
+        }
+
+
+        .kontak {
+
+            background:
+                #263f35;
+
+            color: #a9c8ed;
+
+            font-weight: bold;
+
+        }
+
+
+        .center {
+
+            text-align: center;
+
+            vertical-align: middle;
+
+        }
+
+
+
+        /* =====================================
+           TABEL TANTANGAN
+        ===================================== */
+
+        table:last-of-type {
+
+            margin-bottom: 50px;
+
+        }
+
+
+        table:last-of-type th {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #365448,
+                    #233d33
+                );
+
+            color: #a9c8ed;
+
+        }
+
+
+        table:last-of-type td {
+
+            color: #e3ebe8;
+
+        }
+
+
+
+        /* =====================================
+           BARIS KATEGORI
+        ===================================== */
+
+        table:last-of-type .kategori {
+
+            background:
+                #263f35;
+
+            color: #a8c28c;
+
+            text-align: center;
+
+        }
+
+
+        table:last-of-type .sub {
+
+            background:
+                #21382f;
+
+            color: #83a7d5;
+
+        }
+
+
+
+        /* =====================================
+           RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 700px) {
+
+            body {
+
+                padding: 25px 12px;
+
+            }
+
+
+            h1 {
+
+                font-size: 25px;
+
+            }
+
+
+            h2 {
+
+                font-size: 20px;
+
+            }
+
+
+            table {
+
+                display: block;
+
+                overflow-x: auto;
+
+                white-space: nowrap;
+
+            }
+
+
+            th,
+            td {
+
+                padding: 11px 10px;
+
+                font-size: 13px;
+
+            }
+
+        }
+
+
+
+        /* =====================================
+           SCROLLBAR
+        ===================================== */
+
+        ::-webkit-scrollbar {
+
+            width: 9px;
+
+            height: 9px;
+
+        }
+
+
+        ::-webkit-scrollbar-track {
+
+            background: #101c18;
+
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+
+            background: #536f61;
+
+            border-radius: 10px;
+
+        }
+
+
+        ::-webkit-scrollbar-thumb:hover {
+
+            background: #739687;
+
+        }
+
+    </style>
 
 </head>
 
 
 <body>
 
+    <h2>Data Biodata Siswa PPLG</h2>
 
-    <!-- Background Gunung -->
-    <div class="mountains">
+    <style>
 
-        <div class="mountain mountain-1"></div>
+    table, th, td {
 
-        <div class="mountain mountain-2"></div>
+        border: 1px solid black;
 
-        <div class="mountain mountain-3"></div>
+        border-collapse: collapse;
 
-    </div>
+    }
 
+    </style>
 
+</head>
 
-    <!-- Konten Utama -->
-    <main class="table-container">
+<body>
 
 
-        <!-- Header -->
-        <div class="table-header">
+<table style="width:100%">
 
-            <p class="small-title">
-                PERSONAL MICROSITE
-            </p>
+  <tr>
 
-            <h1>
-                TABEL DATA
-            </h1>
+    <th>Field / Atribut</th>
 
-            <p class="subtitle">
-                Data &amp; Informasi
-            </p>
+    <th>Keterangan / Hasil Input</th>
 
-        </div>
+  </tr>
 
 
+  <tr>
 
-        <!-- Kartu Tabel -->
-        <section class="table-card">
+    <td>Nama</td>
 
+    <td>Natalin Crisdela Hutagalung</td>
 
-            <!-- Judul Tabel -->
-            <div class="table-title">
+  </tr>
 
-                <span class="table-icon">
-                    📋
-                </span>
 
-                <div>
+  <tr>
 
-                    <h2>
-                        Data Siswa
-                    </h2>
+    <td>Alamat</td>
 
-                    <p>
-                        Informasi siswa X RPL 3
-                    </p>
+    <td>Jl.Simpang Sidodadi Panggungrejo</td>
 
-                </div>
+  </tr>
 
-            </div>
 
+  <tr>
 
+    <td>Jurusan</td>
 
-            <!-- Tabel -->
-            <div class="table-wrapper">
+    <td>RPL</td>
 
-                <table>
+  </tr>
 
 
-                    <thead>
+  <tr>
 
-                        <tr>
+    <td>Jenis Kelamin</td>
 
-                            <th>
-                                No
-                            </th>
+    <td>Perempuan</td>
 
-                            <th>
-                                Nama
-                            </th>
+  </tr>
 
-                            <th>
-                                Kelas
-                            </th>
 
-                            <th>
-                                Tema
-                            </th>
+  <tr>
 
-                        </tr>
+    <td>Tinggi Badan (cm)</td>
 
-                    </thead>
+    <td>149</td>
 
+  </tr>
 
 
-                    <tbody>
+  <tr>
 
+    <td>Berat Badan (kg)</td>
 
-                        <tr>
+    <td>41</td>
 
-                            <td>
-                                1
-                            </td>
+  </tr>
 
-                            <td class="name">
-                                Natalin Crisdela Hutagalung
-                            </td>
 
-                            <td>
-                                <span class="class-badge">
-                                    X RPL 3
-                                </span>
-                            </td>
+  <tr>
 
-                            <td>
-                                <span class="theme-badge">
-                                    🏔️ Mountain
-                                </span>
-                            </td>
+    <td>Hobby</td>
 
-                        </tr>
+    <td>Menonton Film</td>
 
+  </tr>
 
 
-                        <tr>
+  <tr>
 
-                            <td>
-                                2
-                            </td>
+    <td>No Hp</td>
 
-                            <td class="name">
-                                Contoh Siswa
-                            </td>
+    <td>082131466649</td>
 
-                            <td>
-                                <span class="class-badge">
-                                    X RPL 3
-                                </span>
-                            </td>
+  </tr>
 
-                            <td>
-                                <span class="theme-badge">
-                                    🌿 Nature
-                                </span>
-                            </td>
 
-                        </tr>
+  <table style="width:100%">
 
+     <th>
+        Status: Data berhasil divalidasi dan direkap ke dalam tabel
+     </th>
 
+  </table>
 
-                        <tr>
+</table>
 
-                            <td>
-                                3
-                            </td>
 
-                            <td class="name">
-                                Contoh Siswa 2
-                            </td>
+<br>
 
-                            <td>
-                                <span class="class-badge">
-                                    X RPL 3
-                                </span>
-                            </td>
 
-                            <td>
-                                <span class="theme-badge">
-                                    🏔️ Mountain
-                                </span>
-                            </td>
+<table style="width:100%">
 
-                        </tr>
+    <h2>
+        Visualisasi Jelas: Merge & Split Cell
+    </h2>
 
 
-                    </tbody>
+<table
+    border="1"
+    style="
+        border-collapse: collapse;
+        text-align: center;
+        width: 100%;
+    "
+>
 
-                </table>
 
-            </div>
+  <tr>
 
+    <th>Kategori Data</th>
 
+    <th>Atribut Form</th>
 
-            <!-- Jumlah Data -->
-            <div class="data-count">
+    <th>Hasil Isian Siswa</th>
 
-                <span>
-                    Total Data
-                </span>
+  </tr>
 
-                <strong>
-                    3 Siswa
-                </strong>
 
-            </div>
+  <tr>
 
+    <td rowspan="3">
+        IDENTITAS PRIBADI
+    </td>
 
+    <td>
+        Nama:
+    </td>
 
-            <!-- Tombol Kembali -->
-            <a
-                href="index.html"
-                class="back-button"
-            >
-                ← Kembali ke Beranda
-            </a>
+    <td>
+        Natalin Crisdela Hutagalung
+    </td>
 
+  </tr>
 
-        </section>
 
+  <tr>
 
-    </main>
+    <td>
+        Alamat:
+    </td>
 
+    <td>
+        Jl.Simpang Sidodadi Panggungrejo
+    </td>
 
+  </tr>
 
-    <!-- Footer -->
-    <footer class="biodata-footer">
 
-        © <span id="year"></span> Natalin • X RPL 3
+  <tr>
 
-    </footer>
+    <td>
+        No Hp:
+    </td>
 
+    <td>
+        082131466649
+    </td>
 
+  </tr>
 
-    <script src="script.js"></script>
+
+  <tr>
+
+    <td rowspan="1">
+        Akademik
+    </td>
+
+    <td>
+        Jurusan:
+    </td>
+
+    <td>
+        RPL
+    </td>
+
+  </tr>
+
+
+  <tr>
+
+    <td rowspan="1">
+        Preferensi
+    </td>
+
+    <td>
+        Jenis Kelamin:
+    </td>
+
+    <td>
+        Perempuan
+    </td>
+
+  </tr>
+
+
+  <tr>
+
+    <td rowspan="2" class="center">
+        Data fisik
+    </td>
+
+    <td rowspan="2" class="center">
+        Pengukuran badan:
+    </td>
+
+    <td>
+        tinggi:149
+    </td>
+
+  </tr>
+
+
+  <tr>
+
+    <td>
+        Berat:41
+    </td>
+
+  </tr>
+
+
+  <tr>
+
+    <td>
+        Lain-lain
+    </td>
+
+    <td>
+        Hobi:
+    </td>
+
+    <td>
+        Menonton Film
+    </td>
+
+  </tr>
+
+
+</table>
+
+</table>
+
+</table>
+
+
+<h1>
+    Tantangan Tabel Kompleks
+</h1>
+
+
+<table>
+
+
+ <tr>
+
+   <th>Kategori Utama</th>
+
+   <th>Sub kategori</th>
+
+   <th>Atribut isisan</th>
+
+   <th>Detail data/nilai</th>
+
+ </tr>
+
+
+
+ <tr>
+
+   <th class="kategori" rowspan="3">
+
+        DATA SISWA
+
+   </th>
+
+
+   <td class="sub" rowspan="2">
+
+      Identitas Utama
+
+   </td>
+
+
+   <td class="atribut">
+
+     Nama Lengkap
+
+   </td>
+
+
+   <td class="detail">
+
+    Natalin Crisdela Hutagalung
+
+   </td>
+
+ </tr>
+
+
+
+ <tr>
+
+  <td class="atribut">
+
+    Alamat Rumah
+
+  </td>
+
+
+  <td class="detail">
+
+    Jl.Simpang Sidodadi Panggungrejo
+
+  </td>
+
+ </tr>
+
+
+
+ <tr>
+
+   <td colspan="2" class="kontak">
+
+        Kontak Aktif: 082131466649
+
+   </td>
+
+   <td>
+        Hobi: Menonton Fim
+   </td>
+
+ </tr>
+
+
+
+ <tr>
+
+  <th>
+      Akademik
+  </th>
+
+  <td>
+      Jurusan PPLG
+  </td>
+
+  <td>
+      Pilihan kelas
+  </td>
+
+  <td>
+      RPL(Rekayasa perangak lunak)
+  </td>
+
+ </tr>
+
+
+
+ <tr>
+
+  <th>
+      Preferensi
+  </th>
+
+  <td>
+      Gender
+  </td>
+
+  <td>
+      Jenis Kelamin
+  </td>
+
+  <td>
+      Perempuan
+  </td>
+
+ </tr>
+
+
+
+ <tr>
+
+   <th rowspan="2">
+       Antropometri
+   </th>
+
+   <td rowspan="2">
+       Pengukuran Fisik
+   </td>
+
+   <td rowspan="2">
+       Parameter Badan
+   </td>
+
+   <td>
+       Tinggi Badan: 149,5 cm
+   </td>
+
+ </tr>
+
+
+
+ <tr>
+
+   <td>
+       Berat Badan: 41 kg
+   </td>
+
+ </tr>
+
+
+</table>
+
 
 </body>
 
