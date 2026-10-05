@@ -1,43 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Form Biodata</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
-    <form action="hasil_biodata.html" method="GET">
-    <label>Nama:</label><br>
-    <input type="text" name="nama"><br><br>
 
-    <label>Alamat:</label><br>
-    <textarea name="alamat"></textarea><br><br>
+    <main class="container">
 
-    <label>Jurusan:</label><br>
-    <select name="jurusan">
-        <option value="RPL">RPL</option>
-        <option value="TKJ">TKJ</option>
-        <option value="TKR">TKR</option>
-        <option value="TSM">TSM</option>
-        <option value="TEI">TEI</option>
-    </select><br><br>
+        <div class="header">
 
-    <label>Jenis Kelamin:</label><br>
-    <input type="radio" name="jk" value="perempuan"> perempuan<br>
-    <input type="radio" name="jk" value="laki-laki"> laki-laki<br><br>
+            <h1>FORM BIODATA</h1>
 
-    <label>Tinggi Badan:</label><br>
-    <input type="number" name="tb"><br><br>
+            <p class="subtitle">
+                Input Data Diri
+            </p>
 
-    <label>Berat Badan:</label><br>
-    <input type="number" name="bb"><br><br>
+        </div>
 
-    <label>Hobi:</label><br>
-    <input type="text" name="hobi"><br><br>
 
-    <label>Nomer hp:</label><br>
-    <input type="number" name="hp"><br><br>
+        <section class="files">
 
-    <button type="submit">Simpan</button>
-</form>
+            <form>
+
+                <div class="form-group">
+
+                    <label>Nama Lengkap</label>
+
+                    <input
+                        type="text"
+                        name="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Kelas</label>
+
+                    <input
+                        type="text"
+                        name="kelas"
+                        placeholder="Contoh: X RPL 3"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Tempat Lahir</label>
+
+                    <input
+                        type="text"
+                        name="tempat"
+                        placeholder="Masukkan tempat lahir"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Tanggal Lahir</label>
+
+                    <input
+                        type="date"
+                        name="tanggal"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Alamat</label>
+
+                    <textarea
+                        name="alamat"
+                        placeholder="Masukkan alamat"
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Simpan Data
+                </button>
+
+            </form>
+
+
+            <br>
+
+
+            <a href="index.html"
+               class="file-card">
+
+                ← Kembali ke Beranda
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
+
+</html>
