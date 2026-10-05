@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Hasil Biodata</title>
+    <title>Hasil Biodata - Natalin</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,82 +17,190 @@
 
 <body>
 
-    <main class="container">
+    <!-- Background gunung -->
+    <div class="mountains">
 
-        <div class="header">
+        <div class="mountain mountain-1"></div>
 
-            <h1>HASIL BIODATA</h1>
+        <div class="mountain mountain-2"></div>
+
+        <div class="mountain mountain-3"></div>
+
+    </div>
+
+
+    <main class="biodata-container">
+
+
+        <!-- Judul -->
+        <div class="biodata-header">
+
+            <p class="small-title">
+                PERSONAL MICROSITE
+            </p>
+
+            <h1>
+                HASIL BIODATA
+            </h1>
 
             <p class="subtitle">
-                Tampilan Data Diri
+                Data Diri Natalin
             </p>
 
         </div>
 
 
-        <section class="files">
 
-            <div class="file-card">
+        <!-- Kartu biodata -->
+        <section class="biodata-card">
 
-                <div class="file-text">
 
-                    <span class="file-name">
-                        Nama Lengkap
-                    </span>
+            <!-- Foto -->
+            <div class="biodata-photo">
 
-                    <span class="file-description">
-                        Natalin Crisdela Hutagalung
-                    </span>
-
-                </div>
+                <img
+                    src="profile.jpg"
+                    alt="Foto Profil Natalin"
+                >
 
             </div>
 
 
-            <div class="file-card">
+            <!-- Nama -->
+            <h2>
+                Natalin Crisdela Hutagalung
+            </h2>
 
-                <div class="file-text">
+            <p class="biodata-role">
+                Student • X RPL 3
+            </p>
 
-                    <span class="file-name">
-                        Kelas
-                    </span>
 
-                    <span class="file-description">
-                        X RPL 3
-                    </span>
+            <!-- Garis -->
+            <div class="line"></div>
+
+
+
+            <!-- Informasi -->
+            <div class="biodata-info">
+
+
+                <!-- Nama -->
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        👤
+                    </div>
+
+                    <div class="info-text">
+
+                        <span>
+                            Nama Lengkap
+                        </span>
+
+                        <strong>
+                            Natalin Crisdela Hutagalung
+                        </strong>
+
+                    </div>
 
                 </div>
+
+
+
+                <!-- Kelas -->
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        🎓
+                    </div>
+
+                    <div class="info-text">
+
+                        <span>
+                            Kelas
+                        </span>
+
+                        <strong>
+                            X RPL 3
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Jurusan -->
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        💻
+                    </div>
+
+                    <div class="info-text">
+
+                        <span>
+                            Jurusan
+                        </span>
+
+                        <strong>
+                            Rekayasa Perangkat Lunak
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Tema -->
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        🏔️
+                    </div>
+
+                    <div class="info-text">
+
+                        <span>
+                            Tema Microsite
+                        </span>
+
+                        <strong>
+                            Mountain &amp; Nature
+                        </strong>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
 
-            <div class="file-card">
 
-                <div class="file-text">
-
-                    <span class="file-name">
-                        Tema
-                    </span>
-
-                    <span class="file-description">
-                        Mountain & Nature
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <a href="index.html"
-               class="file-card">
-
+            <!-- Tombol -->
+            <a
+                href="index.html"
+                class="back-button"
+            >
                 ← Kembali ke Beranda
-
             </a>
+
 
         </section>
 
+
     </main>
+
+
+
+    <footer class="biodata-footer">
+
+        © <span id="year"></span> Natalin • X RPL 3
+
+    </footer>
 
 
     <script src="script.js"></script>

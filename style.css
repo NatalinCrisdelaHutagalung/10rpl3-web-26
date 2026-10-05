@@ -433,58 +433,824 @@ button:hover {
 }
 
 /* =========================================
-   TABLE
+   HALAMAN HASIL BIODATA
 ========================================= */
 
-table {
+.biodata-container {
     width: 100%;
 
-    border-collapse: collapse;
+    max-width: 750px;
 
-    background: rgba(29, 48, 41, 0.95);
+    margin: auto;
 
-    border-radius: 10px;
+    padding: 70px 20px 100px;
 
-    overflow: hidden;
-}
+    position: relative;
 
-
-th,
-td {
-    padding: 14px 10px;
-
-    border: 1px solid #53647c;
+    z-index: 5;
 
     text-align: center;
 }
 
 
-th {
+/* =========================================
+   HEADER BIODATA
+========================================= */
+
+.biodata-header {
+    margin-bottom: 35px;
+}
+
+
+.small-title {
+    color: #83a7d5;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.biodata-header h1 {
+    font-size: 38px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+    color: #f0f4f3;
+}
+
+
+.biodata-header .subtitle {
+    color: #a9b5c8;
+
+    font-size: 16px;
+}
+
+
+
+/* =========================================
+   KARTU BIODATA
+========================================= */
+
+.biodata-card {
+    width: 100%;
+
+    padding: 40px 45px;
+
+    background:
+        rgba(31, 51, 43, 0.95);
+
+    border: 2px solid #53647c;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(5px);
+
+    transition: 0.3s;
+}
+
+
+.biodata-card:hover {
+    border-color: #83a7d5;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+
+/* =========================================
+   FOTO BIODATA
+========================================= */
+
+.biodata-photo {
+    width: 150px;
+
+    height: 150px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid #83a7d5;
+
+    box-shadow:
+        0 0 0 8px rgba(131, 167, 213, 0.08),
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s;
+}
+
+
+.biodata-photo:hover {
+    transform: scale(1.05);
+
+    border-color: #a9c8ed;
+}
+
+
+.biodata-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+}
+
+
+
+/* =========================================
+   NAMA
+========================================= */
+
+.biodata-card h2 {
+    color: #f1f5f4;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+
+
+.biodata-role {
+    color: #a8c28c;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================
+   GARIS
+========================================= */
+
+.line {
+    width: 80px;
+
+    height: 2px;
+
+    margin: 25px auto 30px;
+
+    background: #83a7d5;
+
+    border-radius: 10px;
+}
+
+
+
+/* =========================================
+   INFORMASI
+========================================= */
+
+.biodata-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    text-align: left;
+}
+
+
+.info-item {
+    display: flex;
+
+    align-items: center;
+
+    padding: 16px;
+
+    background: #263f35;
+
+    border: 1px solid #40584e;
+
+    border-radius: 13px;
+
+    transition: 0.3s;
+}
+
+
+.info-item:hover {
+    background: #304b40;
+
+    border-color: #6e88a8;
+
+    transform: translateX(5px);
+}
+
+
+
+/* =========================================
+   ICON INFORMASI
+========================================= */
+
+.info-icon {
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    margin-right: 15px;
+
+    border-radius: 50%;
+
+    background: #304c40;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+
+
+/* =========================================
+   TEXT INFORMASI
+========================================= */
+
+.info-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.info-text span {
+    color: #8fa0b2;
+
+    font-size: 13px;
+}
+
+
+.info-text strong {
+    color: #f1f5f4;
+
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+
+
+/* =========================================
+   TOMBOL KEMBALI
+========================================= */
+
+.back-button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #6d91bd;
+
     background: #30483e;
 
-    color: #a9c8ed;
+    color: #dce7f4;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
 }
 
 
-td {
-    color: #e4ebe8;
+.back-button:hover {
+    background: #6d91bd;
+
+    color: white;
+
+    transform: translateY(-2px);
 }
 
 
-tr:hover td {
-    background: #30483e;
+
+/* =========================================
+   FOOTER BIODATA
+========================================= */
+
+.biodata-footer {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    color: #7f91a5;
+
+    font-size: 13px;
+
+    padding-bottom: 30px;
 }
 
+
+
+/* =========================================
+   RESPONSIVE HP
+========================================= */
 
 @media (max-width: 600px) {
 
-    table {
+    .biodata-container {
+        padding: 45px 15px 70px;
+    }
+
+
+    .biodata-header h1 {
+        font-size: 30px;
+    }
+
+
+    .biodata-card {
+        padding: 30px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .biodata-photo {
+        width: 130px;
+
+        height: 130px;
+    }
+
+
+    .biodata-card h2 {
+        font-size: 20px;
+    }
+
+
+    .info-item {
+        padding: 13px;
+    }
+
+
+    .info-icon {
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 18px;
+
+        margin-right: 12px;
+    }
+
+
+    .info-text strong {
+        font-size: 14px;
+    }
+
+
+    .info-text span {
         font-size: 12px;
     }
 
-    th,
-    td {
-        padding: 10px 5px;
+}
+/* =========================================
+   HALAMAN TABEL DATA
+========================================= */
+
+.table-container {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 70px 20px 100px;
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+
+
+/* =========================================
+   HEADER TABEL
+========================================= */
+
+.table-header {
+    margin-bottom: 35px;
+}
+
+
+.table-header .small-title {
+    color: #83a7d5;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.table-header h1 {
+    color: #f0f4f3;
+
+    font-size: 40px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.table-header .subtitle {
+    color: #a9b5c8;
+
+    font-size: 16px;
+}
+
+
+
+/* =========================================
+   KARTU TABEL
+========================================= */
+
+.table-card {
+    width: 100%;
+
+    padding: 35px;
+
+    background: rgba(31, 51, 43, 0.96);
+
+    border: 2px solid #53647c;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(5px);
+
+    transition: 0.3s;
+}
+
+
+.table-card:hover {
+    border-color: #83a7d5;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+
+/* =========================================
+   JUDUL TABEL
+========================================= */
+
+.table-title {
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+
+.table-icon {
+    width: 55px;
+
+    height: 55px;
+
+    margin-right: 15px;
+
+    border-radius: 50%;
+
+    background: #2d493d;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.table-title h2 {
+    color: #f1f5f4;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    margin-bottom: 4px;
+}
+
+
+.table-title p {
+    color: #8fa0b2;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================
+   PEMBUNGKUS TABEL
+========================================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 13px;
+
+    border: 1px solid #40584e;
+}
+
+
+
+/* =========================================
+   TABEL
+========================================= */
+
+.table-wrapper table {
+    width: 100%;
+
+    min-width: 600px;
+
+    border-collapse: collapse;
+
+    background: #1b3028;
+}
+
+
+.table-wrapper th {
+    padding: 17px 15px;
+
+    background: #30483e;
+
+    color: #a9c8ed;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    border-bottom: 2px solid #53647c;
+}
+
+
+.table-wrapper td {
+    padding: 17px 15px;
+
+    color: #dce5e2;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #354d44;
+
+    text-align: center;
+}
+
+
+
+/* =========================================
+   BARIS TABEL
+========================================= */
+
+.table-wrapper tbody tr {
+    transition: 0.3s;
+}
+
+
+.table-wrapper tbody tr:hover {
+    background: #29443a;
+
+    transform: scale(1.005);
+}
+
+
+.table-wrapper tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+/* =========================================
+   NOMOR
+========================================= */
+
+.table-wrapper tbody td:first-child {
+    color: #83a7d5;
+
+    font-weight: bold;
+
+    width: 60px;
+}
+
+
+
+/* =========================================
+   NAMA
+========================================= */
+
+.table-wrapper td.name {
+    text-align: left;
+
+    color: #f1f5f4;
+
+    font-weight: 500;
+}
+
+
+
+/* =========================================
+   BADGE KELAS
+========================================= */
+
+.class-badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(109, 145, 189, 0.15);
+
+    border: 1px solid #58789f;
+
+    color: #9fc0e5;
+
+    font-size: 12px;
+}
+
+
+
+/* =========================================
+   BADGE TEMA
+========================================= */
+
+.theme-badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(168, 194, 140, 0.12);
+
+    border: 1px solid #617957;
+
+    color: #aec994;
+
+    font-size: 12px;
+}
+
+
+
+/* =========================================
+   JUMLAH DATA
+========================================= */
+
+.data-count {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding: 15px 18px;
+
+    background: #263f35;
+
+    border: 1px solid #40584e;
+
+    border-radius: 10px;
+
+    text-align: left;
+}
+
+
+.data-count span {
+    color: #8fa0b2;
+
+    font-size: 14px;
+}
+
+
+.data-count strong {
+    color: #a8c28c;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+
+/* =========================================
+   TOMBOL KEMBALI
+========================================= */
+
+.table-card .back-button {
+    margin-top: 20px;
+}
+
+
+
+/* =========================================
+   RESPONSIVE HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .table-container {
+        padding: 45px 15px 70px;
+    }
+
+
+    .table-header h1 {
+        font-size: 30px;
+    }
+
+
+    .table-card {
+        padding: 20px 15px;
+
+        border-radius: 18px;
+    }
+
+
+    .table-title {
+        margin-bottom: 20px;
+    }
+
+
+    .table-icon {
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 20px;
+    }
+
+
+    .table-title h2 {
+        font-size: 19px;
+    }
+
+
+    .table-title p {
+        font-size: 12px;
+    }
+
+
+    .table-wrapper th,
+    .table-wrapper td {
+        padding: 13px 10px;
+
+        font-size: 12px;
+    }
+
+
+    .data-count {
+        padding: 13px 15px;
     }
 
 }

@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Tabel Data</title>
+    <title>Tabel Data - Natalin</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,98 +17,228 @@
 
 <body>
 
-    <main class="container">
 
-        <div class="header">
+    <!-- Background Gunung -->
+    <div class="mountains">
 
-            <h1>TABEL DATA</h1>
+        <div class="mountain mountain-1"></div>
+
+        <div class="mountain mountain-2"></div>
+
+        <div class="mountain mountain-3"></div>
+
+    </div>
+
+
+
+    <!-- Konten Utama -->
+    <main class="table-container">
+
+
+        <!-- Header -->
+        <div class="table-header">
+
+            <p class="small-title">
+                PERSONAL MICROSITE
+            </p>
+
+            <h1>
+                TABEL DATA
+            </h1>
 
             <p class="subtitle">
-                Data & Informasi
+                Data &amp; Informasi
             </p>
 
         </div>
 
 
-        <section class="files">
 
-            <table>
-
-                <thead>
-
-                    <tr>
-
-                        <th>No</th>
-
-                        <th>Nama</th>
-
-                        <th>Kelas</th>
-
-                        <th>Tema</th>
-
-                    </tr>
-
-                </thead>
+        <!-- Kartu Tabel -->
+        <section class="table-card">
 
 
-                <tbody>
+            <!-- Judul Tabel -->
+            <div class="table-title">
 
-                    <tr>
+                <span class="table-icon">
+                    📋
+                </span>
 
-                        <td>1</td>
+                <div>
 
-                        <td>Natalin</td>
+                    <h2>
+                        Data Siswa
+                    </h2>
 
-                        <td>X RPL 3</td>
+                    <p>
+                        Informasi siswa X RPL 3
+                    </p>
 
-                        <td>Mountain</td>
+                </div>
 
-                    </tr>
-
-
-                    <tr>
-
-                        <td>2</td>
-
-                        <td>Contoh Siswa</td>
-
-                        <td>X RPL 3</td>
-
-                        <td>Nature</td>
-
-                    </tr>
+            </div>
 
 
-                    <tr>
 
-                        <td>3</td>
+            <!-- Tabel -->
+            <div class="table-wrapper">
 
-                        <td>Contoh Siswa 2</td>
-
-                        <td>X RPL 3</td>
-
-                        <td>Mountain</td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
+                <table>
 
 
-            <br>
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                No
+                            </th>
+
+                            <th>
+                                Nama
+                            </th>
+
+                            <th>
+                                Kelas
+                            </th>
+
+                            <th>
+                                Tema
+                            </th>
+
+                        </tr>
+
+                    </thead>
 
 
-            <a href="index.html"
-               class="file-card">
 
+                    <tbody>
+
+
+                        <tr>
+
+                            <td>
+                                1
+                            </td>
+
+                            <td class="name">
+                                Natalin Crisdela Hutagalung
+                            </td>
+
+                            <td>
+                                <span class="class-badge">
+                                    X RPL 3
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="theme-badge">
+                                    🏔️ Mountain
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td>
+                                2
+                            </td>
+
+                            <td class="name">
+                                Contoh Siswa
+                            </td>
+
+                            <td>
+                                <span class="class-badge">
+                                    X RPL 3
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="theme-badge">
+                                    🌿 Nature
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <tr>
+
+                            <td>
+                                3
+                            </td>
+
+                            <td class="name">
+                                Contoh Siswa 2
+                            </td>
+
+                            <td>
+                                <span class="class-badge">
+                                    X RPL 3
+                                </span>
+                            </td>
+
+                            <td>
+                                <span class="theme-badge">
+                                    🏔️ Mountain
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- Jumlah Data -->
+            <div class="data-count">
+
+                <span>
+                    Total Data
+                </span>
+
+                <strong>
+                    3 Siswa
+                </strong>
+
+            </div>
+
+
+
+            <!-- Tombol Kembali -->
+            <a
+                href="index.html"
+                class="back-button"
+            >
                 ← Kembali ke Beranda
-
             </a>
+
 
         </section>
 
+
     </main>
+
+
+
+    <!-- Footer -->
+    <footer class="biodata-footer">
+
+        © <span id="year"></span> Natalin • X RPL 3
+
+    </footer>
+
 
 
     <script src="script.js"></script>
