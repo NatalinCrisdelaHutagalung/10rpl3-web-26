@@ -480,4 +480,42 @@ footer {
     }
 }
 
+/* =========================================
+   MENAMPILKAN TAHUN OTOMATIS
+========================================= */
+
+const year = document.getElementById("year");
+
+year.textContent = new Date().getFullYear();
+
+
+/* =========================================
+   ANIMASI SAAT HALAMAN DIBUKA
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".file-card");
+
+    cards.forEach(function (card, index) {
+
+        card.style.opacity = "0";
+
+        card.style.transform = "translateY(20px)";
+
+        setTimeout(function () {
+
+            card.style.transition =
+                "opacity 0.5s ease, transform 0.5s ease";
+
+            card.style.opacity = "1";
+
+            card.style.transform = "translateY(0)";
+
+        }, 200 * (index + 1));
+
+    });
+
+});
+
 
