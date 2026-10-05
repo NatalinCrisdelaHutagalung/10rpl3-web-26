@@ -481,41 +481,83 @@ footer {
 }
 
 /* =========================================
-   MENAMPILKAN TAHUN OTOMATIS
+   FORM
 ========================================= */
 
-const year = document.getElementById("year");
+.form-group {
+    text-align: left;
 
-year.textContent = new Date().getFullYear();
-
-
-/* =========================================
-   ANIMASI SAAT HALAMAN DIBUKA
-========================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const cards = document.querySelectorAll(".file-card");
-
-    cards.forEach(function (card, index) {
-
-        card.style.opacity = "0";
-
-        card.style.transform = "translateY(20px)";
-
-        setTimeout(function () {
-
-            card.style.transition =
-                "opacity 0.5s ease, transform 0.5s ease";
-
-            card.style.opacity = "1";
-
-            card.style.transform = "translateY(0)";
-
-        }, 200 * (index + 1));
-
-    });
-
-});
+    margin-bottom: 20px;
+}
 
 
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #dce5e2;
+
+    font-size: 15px;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #53647c;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #1d3029;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #83a7d5;
+}
+
+
+.form-group textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #6d91bd;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background: #82a7d5;
+
+    transform: translateY(-2px);
+}
