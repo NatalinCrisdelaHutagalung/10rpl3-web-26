@@ -1,37 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Utama - Tema Pegunungan</title>
-    <!-- Menghubungkan file style.css -->
+
+    <title>Natalin - Personal Microsite</title>
+
+    <!-- Menghubungkan CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <!-- Bagian Foto & Header Pegunungan -->
-        <div class="header">
-            <!-- Ganti 'pegunungan.jpg' dengan nama file foto yang kamu punya -->
-            <img src="pegunungan.jpg" alt="Foto Pegunungan" class="foto-header">
-            <h1>Natalin</h1>
-            <p>Selamat Datang di Portal Pegunungan</p>
-        </div>
-
-        <!-- Daftar Tombol Menu (Sesuai kodingan asli kamu) -->
-        <div class="menu-list">
-            <!-- Ganti tanda # dengan link file html atau link tujuan kamu -->
-            <a href="form_biodata.html" class="menu-item">
-                <span>📊</span> Form Biodata
-            </a>
-            <a href="hasil_biodata.html" class="menu-item">
-                <span>📋</span> Hasil Biodata
-            </a>
-            <a href="tabel.html" class="menu-item">
-                <span>🔍</span> Tabel
-            </a>
-        </div>
+    <!-- Background gunung -->
+    <div class="mountains">
+        <div class="mountain mountain-1"></div>
+        <div class="mountain mountain-2"></div>
+        <div class="mountain mountain-3"></div>
     </div>
+
+
+    <!-- Konten utama -->
+    <main class="container">
+
+        <!-- Judul -->
+        <section class="header">
+            <h1>NATALIN</h1>
+
+            <p class="subtitle">
+                PERSONAL MICROSITE • X RPL 3
+            </p>
+        </section>
+
+
+        <!-- Foto / Icon profil -->
+        <section class="profile">
+
+            <div class="profile-circle">
+                <div class="profile-icon">
+                    ♙
+                </div>
+            </div>
+
+            <h2>Natalin Crisdela Hutagalung</h2>
+
+            <p class="description">
+                Mountain &amp; Nature Theme
+            </p>
+
+        </section>
+
+
+        <!-- Daftar file -->
+        <section class="files">
+
+            <h3>MY FILES &amp; TASKS</h3>
+
+
+            <!-- File 1 -->
+            <a href="form_biodata.html" class="file-card">
+
+                <div class="file-icon">
+                    ▯
+                </div>
+
+                <div class="file-text">
+                    <span class="file-name">
+                        form_biodata.html
+                    </span>
+
+                    <span class="file-description">
+                        Form Input Data
+                    </span>
+                </div>
+
+            </a>
+
+
+            <!-- File 2 -->
+            <a href="hasil_biodata.html" class="file-card">
+
+                <div class="file-icon">
+                    ▯
+                </div>
+
+                <div class="file-text">
+                    <span class="file-name">
+                        hasil_biodata.html
+                    </span>
+
+                    <span class="file-description">
+                        Tampilan Hasil Data
+                    </span>
+                </div>
+
+            </a>
+
+
+            <!-- File 3 -->
+            <a href="tabel.html" class="file-card">
+
+                <div class="file-icon">
+                    ▯
+                </div>
+
+                <div class="file-text">
+                    <span class="file-name">
+                        tabel.html
+                    </span>
+
+                    <span class="file-description">
+                        Tabel Data &amp; Informasi
+                    </span>
+                </div>
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        © <span id="year"></span> Natalin • X RPL 3
+    </footer>
+
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js"></script>
+
 
 </body>
 </html>
