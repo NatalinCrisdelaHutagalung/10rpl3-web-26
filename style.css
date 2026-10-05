@@ -178,26 +178,6 @@ body::before {
 }
 
 
-/* Lingkaran foto */
-
-.profile-circle {
-    width: 164px;
-    height: 164px;
-
-    margin: auto;
-
-    border: 4px solid #83a7d5;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    transition: 0.3s;
-}
-
 
 /* Hover lingkaran */
 
