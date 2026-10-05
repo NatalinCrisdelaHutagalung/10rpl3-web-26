@@ -1,2 +1,483 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #f1f5f4;
+
+    background: #101816;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND UTAMA
+========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70%;
+
+    background: #293f36;
+
+    z-index: -5;
+}
+
+
+/* =========================================
+   GUNUNG
+========================================= */
+
+.mountains {
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 55%;
+
+    z-index: -2;
+
+    overflow: hidden;
+}
+
+
+/* Bentuk dasar gunung */
+
+.mountain {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+
+    border-bottom: 350px solid #172c25;
+}
+
+
+/* Gunung pertama */
+
+.mountain-1 {
+    left: -80px;
+    bottom: 0;
+
+    transform: scale(1.2);
+
+    border-bottom-color: #10221d;
+}
+
+
+/* Gunung kedua */
+
+.mountain-2 {
+    left: 18%;
+
+    bottom: -30px;
+
+    transform: scale(1.35);
+
+    border-bottom-color: #1c352c;
+}
+
+
+/* Gunung ketiga */
+
+.mountain-3 {
+    right: -80px;
+
+    bottom: -20px;
+
+    transform: scale(1.3);
+
+    border-bottom-color: #12251f;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 80px 30px 150px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header h1 {
+    font-size: 46px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+}
+
+
+.subtitle {
+    color: #a9b5c8;
+
+    font-size: 19px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile {
+    margin-top: 50px;
+}
+
+
+/* Lingkaran foto */
+
+.profile-circle {
+    width: 164px;
+    height: 164px;
+
+    margin: auto;
+
+    border: 4px solid #83a7d5;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+
+/* Hover lingkaran */
+
+.profile-circle:hover {
+    transform: scale(1.05);
+
+    border-color: #a9c8ed;
+}
+
+
+/* Icon */
+
+.profile-icon {
+    width: 42px;
+    height: 54px;
+
+    border: 5px solid #07100d;
+
+    color: #07100d;
+
+    font-size: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* Nama */
+
+.profile h2 {
+    margin-top: 25px;
+
+    font-size: 27px;
+
+    font-weight: 400;
+}
+
+
+/* Deskripsi */
+
+.description {
+    margin-top: 8px;
+
+    color: #a8c28c;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   FILES
+========================================= */
+
+.files {
+    width: 100%;
+
+    max-width: 535px;
+
+    margin: 58px auto 0;
+}
+
+
+.files h3 {
+    font-size: 20px;
+
+    font-weight: 400;
+
+    margin-bottom: 48px;
+}
+
+
+/* =========================================
+   FILE CARD
+========================================= */
+
+.file-card {
+    width: 100%;
+
+    min-height: 88px;
+
+    margin-bottom: 22px;
+
+    padding: 15px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: rgba(37, 57, 49, 0.95);
+
+    border: 2px solid #53647c;
+
+    border-radius: 15px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover card */
+
+.file-card:hover {
+    transform: translateY(-5px);
+
+    background: #30483e;
+
+    border-color: #86a8d3;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   ICON FILE
+========================================= */
+
+.file-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    margin-right: 20px;
+
+    border-radius: 50%;
+
+    background: #2d493d;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #050908;
+
+    font-size: 30px;
+}
+
+
+/* =========================================
+   TEXT FILE
+========================================= */
+
+.file-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.file-name {
+    font-size: 20px;
+
+    color: #f2f3f3;
+}
+
+
+.file-description {
+    font-size: 15px;
+
+    color: #83c4df;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    color: #7f91a5;
+
+    font-size: 15px;
+
+    padding-bottom: 35px;
+}
+
+
+/* =========================================
+   RESPONSIVE / HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 55px 20px 100px;
+    }
+
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+
+    .profile {
+        margin-top: 40px;
+    }
+
+
+    .profile-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .profile h2 {
+        font-size: 21px;
+    }
+
+
+    .description {
+        font-size: 15px;
+    }
+
+
+    .files {
+        margin-top: 45px;
+    }
+
+
+    .files h3 {
+        font-size: 18px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .file-card {
+        min-height: 80px;
+
+        padding: 12px 15px;
+    }
+
+
+    .file-icon {
+        width: 45px;
+        height: 45px;
+
+        margin-right: 13px;
+    }
+
+
+    .file-name {
+        font-size: 16px;
+    }
+
+
+    .file-description {
+        font-size: 13px;
+    }
+
+
+    footer {
+        font-size: 13px;
+    }
+}
 
 
